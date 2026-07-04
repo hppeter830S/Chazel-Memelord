@@ -295,6 +295,55 @@ video {
     color: var(--pink-hot);
 }
 
+/* Home page — compact single-row social links */
+.social-grid-home {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.social-grid-home .social-card {
+    padding: 22px 10px;
+    box-shadow: 4px 4px 0 rgba(23, 15, 39, 0.9);
+}
+
+.social-grid-home .social-card:hover {
+    box-shadow: 8px 8px 0 var(--pink-hot);
+}
+
+.social-grid-home .social-card img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+}
+
+.social-grid-home .social-card h3 {
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.social-grid-home .counter {
+    font-size: 1.05rem;
+}
+
+.social-grid-home .social-card p {
+    font-size: 0.65rem !important;
+    line-height: 1.3;
+    margin-top: 4px;
+}
+
+@media (max-width: 992px) {
+    .social-grid-home {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .social-grid-home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Forms & Buttons */
 .btn-primary {
     background: var(--pink-hot);
