@@ -73,15 +73,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- CONTACT FORM HANDLING ---
+    // This sends the form to Formspree (see the setup comment in contact.html
+    // for how to plug in your own Form ID) using fetch, so the visitor stays
+    // on the page and just sees a success or error message — no page reload.
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // EDITABLE: Configure form submission behavior here
-            // For now, it just shows a success message
-            alert('Thanks for reaching out! Chazel\'s team will get back to you soon.');
-            contactForm.reset();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) {
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+            }
+
+            const formData = new FormData(contactForm);
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        alert('Thanks for reaching out! Chazel\'s team will get back to you soon.');
+                        contactForm.reset();
+                    } else {
+                        // EDITABLE: this fires if Formspree rejects the request —
+                        // most often because YOUR_FORM_ID hasn't been replaced yet
+                        // in contact.html, or the form was disabled/deleted.
+                        alert('Something went wrong sending your message. Please try again in a moment, or email us directly.');
+                    }
+                })
+                .catch(() => {
+                    // Fires on network errors (no internet connection, etc.)
+                    alert('Could not send your message — please check your connection and try again.');
+                })
+                .finally(() => {
+                    if (submitBtn) {
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }
+                });
         });
     }
 

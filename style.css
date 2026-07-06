@@ -149,6 +149,18 @@ nav {
     width: 100%;
 }
 
+/* Active page indicator — the current page's nav link gets a permanent
+   underline + accent color. Add class="active" to the matching <a> in each
+   page's own nav (already done for you — see the header markup in each .html
+   file). If you add a new page, remember to mark its own link "active". */
+.nav-links a.active {
+    color: var(--pink-hot);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
 /* Layout Containers */
 .container {
     max-width: 1100px;
@@ -296,8 +308,12 @@ video {
 }
 
 /* Home page — compact single-row social links */
+/* EDITABLE: number of platforms shown on the home page. Currently 6
+   (Facebook, Instagram, TikTok, X, WhatsApp Channel, YouTube). If you add or
+   remove a platform card in index.html, update the "repeat(6, 1fr)" number
+   below to match, so they all still fit on one row on desktop. */
 .social-grid-home {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 14px;
 }
 
@@ -341,6 +357,34 @@ video {
 @media (max-width: 600px) {
     .social-grid-home {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Collaboration page — "Areas of Collaboration" boxes, one row on desktop */
+/* EDITABLE: number of collaboration cards. Currently 5. If you add/remove a
+   card in collaboration.html, update "repeat(5, 1fr)" below to match. */
+.collab-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+@media (max-width: 992px) {
+    .collab-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .collab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+    .collab-grid {
+        grid-template-columns: 1fr;
     }
 }
 

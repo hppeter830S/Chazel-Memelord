@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partnership | Chazel</title>
+    <title>Business & Partnerships | Chazel</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .hero-partnership {
@@ -15,9 +15,7 @@
             color: white;
             padding: 80px 40px;
             border-radius: var(--border-radius);
-            margin-top: -80px;
             position: relative;
-            z-index: 10;
             border: 3px solid var(--purple-dark);
         }
         .brand-badge {
@@ -31,20 +29,6 @@
             margin-bottom: 15px;
             text-transform: uppercase;
         }
-        .founders-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0 10px;
-        }
-        .founder-chip {
-            background: var(--white);
-            border: 3px solid var(--purple-dark);
-            border-radius: 50px;
-            padding: 10px 24px;
-            font-weight: 700;
-        }
         .service-card {
             background: var(--white);
             border: 3px solid var(--purple-dark);
@@ -57,12 +41,6 @@
             transform: translate(-4px, -4px);
             box-shadow: 10px 10px 0 var(--pink-hot);
         }
-        .service-kirundi {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 8px;
-            line-height: 1.6;
-        }
     </style>
 </head>
 <body>
@@ -73,7 +51,8 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
-                <a href="partnership.html">Partnership</a>
+                <a href="collaboration.html">Collaboration</a>
+                <a href="partnership.html" class="active">Partnership</a>
                 <a href="contact.html">Contact</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
@@ -83,26 +62,32 @@
     <main>
         <section class="hero hero-partnership">
             <div class="hero-content">
-                <p class="eyebrow">Collaborations</p>
-                <h1>Brand Partnerships</h1>
+                <p class="eyebrow">Beyond the Memes</p>
+                <h1>Business & Partnerships</h1>
             </div>
         </section>
 
-        <!-- SUPERBAT BRAND DEAL -->
+        <section class="container" style="padding-bottom: 0;">
+            <p style="text-align: center; max-width: 750px; margin: 0 auto; font-size: 1.1rem; color: var(--text-main);">
+                Beyond content creation, IRADUKUNDA Chalom has also built experience in business, entrepreneurship, and professional brand collaborations — combining creativity, entrepreneurship, and professional partnerships across different industries.
+            </p>
+        </section>
+
+        <!-- SUPERBAT PARTNERSHIP -->
         <section class="container">
             <div class="brand-showcase">
-                <div class="brand-badge">Brand Ambassador</div>
+                <div class="brand-badge">Business Partner</div>
                 <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Superbat</h2>
-                <p style="color: var(--yellow-pop); font-size: 1.2rem; margin-bottom: 30px;">A construction materials company — production, sales, and distribution.</p>
+                <p style="color: var(--yellow-pop); font-size: 1.2rem; margin-bottom: 30px;">Manufacturing and supplying roofing sheets, nails, and other construction materials.</p>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
                     <div style="background: rgba(255,255,255,0.06); padding: 25px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.15);">
                         <h4 style="color: var(--yellow-pop); margin-bottom: 10px;">The Partnership</h4>
-                        <p style="font-size: 0.9rem;">Chazel is an official brand ambassador for Superbat, bringing his comedic voice to their marketing and audience.</p>
+                        <p style="font-size: 0.9rem;">Chalom works with Superbat, lending his voice and creative reach to their marketing and audience.</p>
                     </div>
                     <div style="background: rgba(255,255,255,0.06); padding: 25px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.15);">
                         <h4 style="color: var(--yellow-pop); margin-bottom: 10px;">What Superbat Does</h4>
-                        <p style="font-size: 0.9rem;">Superbat produces and sells construction materials across Burundi.</p>
+                        <p style="font-size: 0.9rem;">Superbat manufactures and supplies roofing sheets, nails, and other construction materials, serving a wide range of customers in the market.</p>
                     </div>
                 </div>
             </div>
@@ -111,78 +96,35 @@
         <!-- ADDA GLOBAL COMPANY -->
         <section class="container">
             <div style="text-align: center; margin-bottom: 30px;">
-                <span class="sticker teal">Co-Founded Company</span>
+                <span class="sticker teal">Co-Founder</span>
                 <h2 style="font-size: 2.5rem; margin: 20px 0 10px;">Adda Global Company</h2>
-                <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">Founded together by three partners, Adda Global is a multi-service company built to support everyday people and businesses across travel, logistics, marketing, and construction.</p>
-                <div class="founders-row">
-                    <span class="founder-chip">Chazel</span>
-                    <span class="founder-chip">Bahe</span>
-                    <span class="founder-chip">Adelard</span>
-                </div>
+                <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">Chalom is the Co-Founder of Adda Global Company, a travel agency helping people access international travel opportunities.</p>
             </div>
 
-            <div class="social-grid" style="margin-top: 50px;">
+            <div class="social-grid" style="margin-top: 50px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
                 <div class="service-card">
-                    <h4 style="margin-bottom: 10px;">✈️ Travel Agency</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">We help you get flight tickets at good prices and support you throughout your trip, all the way to your destination.</p>
-                    <p class="service-kirundi"><em>Turagufasha kuronka tickets z'indege ku giciro ciza no kugushigikira mu rugendo rwawe gushika ugeze iyo uja.</em></p>
+                    <h4 style="margin-bottom: 10px;">✈️ Flight Ticket Booking</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Helping customers book flight tickets for their trips, wherever they're headed.</p>
                 </div>
                 <div class="service-card">
-                    <h4 style="margin-bottom: 10px;">📦 Clearing & Forwarding</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">We help you track and process your goods with no hassle.</p>
-                    <p class="service-kirundi"><em>Turagufasha mu gukurikirana no gutunganya ibidandazwa vyawe ata ngorane.</em></p>
+                    <h4 style="margin-bottom: 10px;">🛂 Visa Assistance</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Supporting travelers through the visa process to make international travel easier.</p>
                 </div>
                 <div class="service-card">
-                    <h4 style="margin-bottom: 10px;">🚚 Transport & Logistics</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">We help arrange vehicle rentals and connect buyers with vehicles from abroad.</p>
-                    <p class="service-kirundi"><em>Gukotesha imiduga hamwe n'abipfuza kugura imiduga mumahanga turabafasha.</em></p>
+                    <h4 style="margin-bottom: 10px;">🌍 International Travel Access</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Helping people access international travel opportunities from start to finish.</p>
                 </div>
-                <div class="service-card">
-                    <h4 style="margin-bottom: 10px;">📣 Marketing Agency</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">We help businesses and artists manage advertising and run their online pages, and more.</p>
-                    <p class="service-kirundi"><em>Dufasha ama Entreprise canke abaririmvyi kubijanye na Gestion ya Publicité canke ku Gérant imbuga zabo n'ibindi.</em></p>
-                </div>
-                <div class="service-card">
-                    <h4 style="margin-bottom: 10px;">🏗️ Construction</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">We help people who want to build or sell property, and everything related to that.</p>
-                    <p class="service-kirundi"><em>Gufasha abipfuza kwubaka amazu yabo canke kugurisha nibindi bijanye n'ivyo.</em></p>
-                </div>
-            </div>
-
-            <div class="stats-box" style="margin-top: 60px; text-align: center;">
-                <h3 style="color: white; margin-bottom: 20px;">Our Mission</h3>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">To be a trusted partner in your daily activities and your business — reliable service, fair prices for everyone, fast and professional work.</p>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 15px auto 0; font-size: 0.85rem;"><em>Kubabera umufasha wizewe mu bikorwa vyanyu vya buri munsi no mu bucuruzi bwanyu — Service yizewe, Igiciro kibereye bose, Gukora vyihuta kandi kinyamwuga.</em></p>
             </div>
         </section>
 
         <section class="container">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2>Work With Us</h2>
-                <p style="color: var(--text-muted); max-width: 600px; margin: 20px auto 0;">Looking to team up with Chazel or Adda Global Company? We're open to partnerships that bring value and a few laughs along the way.</p>
-            </div>
-
-            <div class="social-grid">
-                <div class="social-card">
-                    <h4 style="margin-bottom: 15px;">Brand Collaborations</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Meme campaigns, product shoutouts, and brand storytelling.</p>
+            <div style="background: var(--white); border: 3px solid var(--purple-dark); padding: 50px; border-radius: var(--border-radius); box-shadow: var(--shadow-soft); text-align: center;">
+                <h2 style="margin-bottom: 20px;">Business Inquiries</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">For anything related to Adda Global Company or Superbat — or a business partnership of your own — reach out directly. Looking for a brand collaboration or content campaign instead? Visit the Collaboration page.</p>
+                <div style="text-align: center; margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn-primary">Get In Touch</a>
+                    <a href="collaboration.html" class="btn-primary" style="background: var(--teal-pop); color: var(--purple-dark); border-color: var(--purple-dark);">See Collaboration</a>
                 </div>
-                <div class="social-card">
-                    <h4 style="margin-bottom: 15px;">Sponsorships</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Event sponsorships and content partnerships.</p>
-                </div>
-                <div class="social-card">
-                    <h4 style="margin-bottom: 15px;">Bookings</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Appearances, hosting, and event content for corporate or private events.</p>
-                </div>
-                <div class="social-card">
-                    <h4 style="margin-bottom: 15px;">Business Inquiries</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Travel, clearing, transport, marketing, or construction services via Adda Global.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 80px;">
-                <a href="contact.html" class="btn-primary">Inquire for Partnership</a>
             </div>
         </section>
     </main>
@@ -190,7 +132,7 @@
     <footer>
         <div class="container">
             <h3 style="margin-bottom: 20px;">CHAZEL</h3>
-            <p>Powered by <a href="https://hppeter.vercel.app/" class="studio-link" target="_blank">HP PETER TECH STUDIO</a></p>
+            <p>Developed by <a href="https://hppeter.vercel.app/" class="studio-link" target="_blank">HP PETER TECH STUDIO</a></p>
             <div class="copyright">&copy; 2026 Chazel. All Rights Reserved.</div>
         </div>
     </footer>

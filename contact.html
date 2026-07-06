@@ -6,11 +6,9 @@
     <title>Contact | Chazel</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
-            margin-top: 50px;
+        .contact-info-wrap {
+            max-width: 560px;
+            margin: 50px auto 0;
         }
         .contact-info-card {
             background: var(--purple-dark);
@@ -49,7 +47,15 @@
             box-shadow: var(--shadow-soft);
         }
         @media (max-width: 992px) {
-            .contact-layout { grid-template-columns: 1fr; }
+            .contact-info-wrap {
+                margin: 40px auto 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .contact-info-card,
+            .contact-form-card {
+                padding: 32px 24px;
+            }
         }
     </style>
 </head>
@@ -61,8 +67,9 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
+                <a href="collaboration.html">Collaboration</a>
                 <a href="partnership.html">Partnership</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="active">Contact</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
         </nav>
@@ -76,13 +83,13 @@
                 <p style="color: var(--text-muted);">Got a collab idea, a booking, or a business inquiry for Adda Global? Reach out directly.</p>
             </div>
             <div style="position: relative; margin-bottom: 50px; z-index: 1;">
-                <div class="contact-layout">
+                <div class="contact-info-wrap">
                     <!-- CONTACT INFO -->
                     <div class="contact-info-card">
                         <h3 style="color: var(--yellow-pop); margin-bottom: 40px;">Contact Details</h3>
 
                         <div class="contact-item">
-                            <img src="images/gmail.jpg" alt="Email">
+                            <img style="border-radius: 10px;" src="images/gmail.jpg" alt="Email">
                             <div>
                                 <h4>Email Us</h4>
                                 <p><a href="mailto:iradukundachalome7@gmail.com">iradukundachalome7@gmail.com</a></p>
@@ -90,7 +97,7 @@
                         </div>
 
                         <div class="contact-item">
-                            <img src="images/whatsapp.png" alt="WhatsApp">
+                            <img style="border-radius: 10px;" src="images/whatsapp.png" alt="WhatsApp">
                             <div>
                                 <h4>WhatsApp / Phone</h4>
                                 <p><a href="https://wa.me/25771503697" target="_blank">+257 71 503 697</a></p>
@@ -102,25 +109,49 @@
                 <!-- CONTACT FORM -->
                 <div class="contact-form-card">
                     <h3 style="margin-bottom: 30px;">Send a Message</h3>
-                    <form id="contact-form">
+
+                    <!--
+                        ============================================================
+                        FORMSPREE SETUP — read this before the form goes live!
+                        ============================================================
+                        1. Go to https://formspree.io and create a free account.
+                        2. Click "New Form", give it a name (e.g. "Chazel Contact
+                           Form"), and confirm your own email as the recipient.
+                        3. Formspree will give you an endpoint URL that looks like:
+                               https://formspree.io/f/abcdwxyz
+                           Copy the part after "f/" — that's your Form ID.
+                        4. Replace YOUR_FORM_ID in the "action" attribute directly
+                           below with that ID. Example:
+                               action="https://formspree.io/f/abcdwxyz"
+                        5. Save, upload the site, then send yourself a test
+                           message from the live form to confirm it arrives.
+                        Until step 4 is done, the form will show an error when
+                        someone tries to submit it — that's expected.
+                        ============================================================
+                    -->
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                <input type="text" id="name" name="name" placeholder="Write your full name here (e.g. IRADUKUNDA Chalom)" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                <input type="email" id="email" name="email" placeholder="write your email here (e.g. iradukundachalome7@gmail.com)" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Inquiry Type" required>
+                            <input type="text" id="subject" name="subject" placeholder="Inquiry Type(why you are contacting Chazel? e.g. Collaboration Opportunity)" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
+                            <textarea id="message" name="message" rows="6" placeholder="How can we help you?(Describe your idea)" required></textarea>
                         </div>
+                        <!-- EDITABLE: this hidden field sets the subject line of the
+                             notification email Formspree sends you. Change the
+                             value text if you'd like a different email subject. -->
+                        <input type="hidden" name="_subject" value="New message from the Chazel website">
                         <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
@@ -131,7 +162,7 @@
     <footer>
         <div class="container">
             <h3 style="margin-bottom: 20px;">CHAZEL</h3>
-            <p>Powered by <a href="https://hppeter.vercel.app/" class="studio-link" target="_blank">HP PETER TECH STUDIO</a></p>
+            <p>Developed by <a href="https://hppeter.vercel.app/" class="studio-link" target="_blank">HP PETER TECH STUDIO</a></p>
             <div class="copyright">&copy; 2026 Chazel. All Rights Reserved.</div>
         </div>
     </footer>
